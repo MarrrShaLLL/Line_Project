@@ -1,4 +1,4 @@
-import { RaycasterHelper } from './recaster.js'
+import { RaycasterHelper } from './raycaster.js'
 import { RectangleLines } from './createline.js'
 
 export function setupMouseEvents(renderer, camera, scene) {
@@ -8,7 +8,7 @@ export function setupMouseEvents(renderer, camera, scene) {
 
     window.addEventListener('click', (event) => {
         isDrawing = !isDrawing
-        const intersection = raycasterHelper.UpdatercasterDirection(event)
+        const intersection = raycasterHelper.UpdateRaycasterDirection(event)
 
 
             if (isDrawing) {
@@ -21,7 +21,7 @@ export function setupMouseEvents(renderer, camera, scene) {
 
     window.addEventListener('mousemove', (event) => {
         if (isDrawing ) {
-            const intersection = raycasterHelper.UpdatercasterDirection(event)
+            const intersection = raycasterHelper.UpdateRaycasterDirection(event)
             if (intersection) {
                 rectangle.updateLines(intersection)
             }
