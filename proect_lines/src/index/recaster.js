@@ -15,7 +15,7 @@ export class RaycasterHelper {
 
         this.raycaster.setFromCamera(this.mouse, this.camera)
         const intersection = new THREE.Vector3()
-        const plane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0)
+        const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0)
 
         if (this.raycaster.ray.intersectPlane(plane, intersection)) {
             return intersection
