@@ -1,12 +1,7 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <header>
-    
-       
-      
-  </header>
+  <header></header>
 
   <RouterView />
 </template>
